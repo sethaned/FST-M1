@@ -1,25 +1,16 @@
 import java.util.Arrays;
-
-class Activity4 {
-    static void ascendingSort(int array[]) {
-        int size = array.length, i;
-
-        for (i = 1; i < size; i++) {
-            int key = array[i];
-            int j = i - 1;
-
-            while (j >= 0 && key < array[j]) {
-                array[j + 1] = array[j];
-                --j;
-            }
-            array[j + 1] = key;
-        }
-    }
-
-    public static void main(String args[]) {
+public class Activity4 {
+    public static void main(String[] args) {
+//defining an array of integer type
         int[] data = { 9, 5, 1, 4, 3 };
-        ascendingSort(data);
-        System.out.println("Sorted Array in Ascending Order: ");
-        System.out.println(Arrays.toString(data));
+//invoking sort() method of the Arrays class
+        Arrays.sort(data);
+        System.out.println("Elements of array sorted in ascending order: ");
+        for (int i = 0; i < data.length; i++)
+        {
+            //System.out.println(data[i]);
+           System.out.printf(Arrays.toString(data));
+           break;
+         }
     }
 }
